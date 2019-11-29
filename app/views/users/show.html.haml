@@ -1,5 +1,5 @@
 .text-center
-	= image_tag @user.avatar, class: "avatar"
+	= image_tag @user.avatar.to_s, class: "avatar"
 .text-center#user-description
 	= @user.nickname
 	- if user_signed_in?

@@ -2,7 +2,7 @@
 %br>/
 ' + '
 .chat-message__name>
-  ' + '#{image_tag(@message.user.avatar, class: "message-avatar")}' + '#{@message.body}' + '
+  ' + '#{image_tag(@message.user.avatar.to_s, class: "message-avatar")}' + '#{@message.body}' + '
 ');
 
 
@@ -12,6 +12,6 @@
 %br/
 \//
 .chat-message__name
-  \//   #{image_tag(@message.user.avatar, class: "message-avatar")}
+  \//   #{image_tag(@message.user.avatar.to_s, class: "message-avatar")}
   \//   #{@message.body}
   \//

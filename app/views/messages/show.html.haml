@@ -27,7 +27,7 @@
         / - @my_messages.each do |message|
         /   %br.chat-message
         /     %br.chat-message__name#my_message
-        /       = image_tag message.user.avatar, class: "message-avatar"
+        /       = image_tag message.user.avatar.to_s, class: "message-avatar"
         /       = message.body
       %ul.chat-messages
         - @messages.each do |message|
@@ -37,11 +37,11 @@
                 .chat-message__name
                 .chat-message__body
                   %span.text-left= message.body
-                  = image_tag message.user.avatar, class: "message-avatar"
+                  = image_tag message.user.avatar.to_s, class: "message-avatar"
             - else
               .chat-message__header.clearfix 
                 .chat-message__name
-                  = image_tag message.user.avatar, class: "message-avatar"
+                  = image_tag message.user.avatar.to_s, class: "message-avatar"
                 .chat-message__body.text-right
                   = message.body
     .chat-footer
